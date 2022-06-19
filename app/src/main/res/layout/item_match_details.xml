@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearListIteam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_weight="0.6">
+
+            <ImageView
+                android:id="@+id/image_Champion"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/imgavata1" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/image_Champion"
+                android:hint="Player Name"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_KillsSupportDeath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/image_Champion"
+                android:hint="Kills/Support/Death"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4">
+            <LinearLayout
+                android:background="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/linearListIteam1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_Iteam1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="1dp"/>
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_Iteam2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="1dp"/>
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_Iteam3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="1dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:background="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/linearListIteam1"
+                android:id="@+id/linearListIteam2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_Iteam4"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="1dp"/>
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_Iteam5"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="1dp"/>
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_Iteam6"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="1dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_Level"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@id/linearListIteam1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="1 lv" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_Level"
+                android:layout_toEndOf="@id/linearListIteam1"
+                android:text="Level" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearListIteam">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/tv_PhysicalDamage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:hint="Physical Damage"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_MagicDamage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:hint="Magic Damage"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_PhysicalDamage" />
+
+        <TextView
+            android:id="@+id/tv_GoldEarned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Gold Earned"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_GoldSpent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Gold Spent"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline_1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_PhysicalDamage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#251414"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
